@@ -1,4 +1,4 @@
-JavaScript-The_Definitive_Guide
-===============================
 
-JavaScript权威指南读书笔记
+# 《JavaScript权威指南》读书笔记
+
+* 第18章 脚本化HTTP
