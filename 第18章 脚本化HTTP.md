@@ -46,7 +46,20 @@ GET请求绝对没有请求主体，所以应该传递null或省略这个参数�
 
 * status和statusText属性以数字和文本的形式返回HTTP状态码。这些属性保存标准的HTTP值，像200和“OK”表示成功请求，404和
 “Not Found”表示URL不能匹配服务器上的任何资源。
-* 
+* 使用getResponseHeader("KEY")和getAllResponseHeaders()能查询响应头。XMLHttpRequest会自动处理cookie：它会从
+getAllResponseHeaders()头返回集合中过滤掉cookie头，而如果给getResponseHeader()传递“Set-Cookie”和“Set-Cookie2”则返回null。
+* 响应主体可以从responseText属性中得到文本形式的，从responseXML属性中得到Document形式的。
+
+### 18.1.3 编码请求主体
+
+HTTP POST请求包含一个请求主体，它包含客户端传递给服务器的数据。
+
+#### 1.表单编码的请求
+
+考虑HTML表单。当用户提交表单时，表单中的数据编码到一个字符串中并随请求发送。默认情况下，HTML表单通过POST方法发送给服务器，
+而编码后的表单数据则用做请求主体。对表单数据使用的编码方案相对简单：对每个表单元素的名字和值执行普通的URL编码（使用
+十六进制转义码替换特殊字符），使用等号把编码后的名字和值分开，并使用“&”符号分开名/值对。
+
 
 
 
