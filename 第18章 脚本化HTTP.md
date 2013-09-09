@@ -2,6 +2,8 @@
 
 ## 18.1 使用XMLHttpRequest
 
+    var request = new XMLHttpRequest()
+
 一个HTTP请求由4部分组成：
 
 * HTTP请求方法或“动作”（verb）
@@ -14,5 +16,7 @@
 * 一个数字和文字组成的状态码，用来显示请求的成功或失败
 * 一个响应头集合
 * 响应主体
+
+### 18.1.1 指定请求
 
 
